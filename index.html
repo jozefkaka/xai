@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAKA AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><div class="app">
+
+    <!-- نوار کناری -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="logo">✦</div>
+            <div>
+                <h2>KAKA AI</h2>
+                <span>هوش مصنوعی هوشمند</span>
+            </div>
+        </div>
+
+        <button class="new-chat" onclick="newChat()">
+            <span>＋</span>
+            گفت‌وگوی جدید
+        </button>
+
+        <div class="history">
+            <p class="history-title">گفت‌وگوهای اخیر</p>
+
+            <div class="history-item">
+                <span>💬</span>
+                گفت‌وگوی جدید
+            </div>
+
+            <div class="history-item">
+                <span>💡</span>
+                ایده‌های خلاقانه
+            </div>
+
+            <div class="history-item">
+                <span>💻</span>
+                برنامه‌نویسی
+            </div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <button onclick="toggleTheme()">☾ حالت تاریک</button>
+            <button>⚙ تنظیمات</button>
+        </div>
+    </aside>
+
+    <!-- بخش اصلی -->
+    <main class="main">
+
+        <header class="topbar">
+            <button class="mobile-menu" onclick="toggleSidebar()">☰</button>
+
+            <div class="model-info">
+                <div class="status-dot"></div>
+                <div>
+                    <strong>KAKA AI</strong>
+                    <small>آنلاین و آماده پاسخ‌گویی</small>
+                </div>
+            </div>
+
+            <button class="clear-btn" onclick="clearChat()">پاک کردن</button>
+        </header>
+
+        <!-- صفحه خوش‌آمدگویی -->
+        <section class="welcome" id="welcome">
+
+            <div class="welcome-icon">✦</div>
+
+            <h1>سلام، من <span>KAKA AI</span> هستم</h1>
+
+            <p>
+                یک دستیار هوش مصنوعی قدرتمند برای فکر کردن،
+                یادگیری، ساختن و حل کردن.
+            </p>
+
+            <div class="suggestions">
+
+                <button onclick="setPrompt('یک ایده خلاقانه و خاص برای ساخت یک سایت به من بده')">
+                    <span>💡</span>
+                    <div>
+                        <strong>ایده خلاقانه</strong>
+                        <small>یک ایده خاص به من بده</small>
+                    </div>
+                </button>
+
+                <button onclick="setPrompt('پایتون را از صفر به صورت حرفه‌ای به من یاد بده')">
+                    <span>🧠</span>
+                    <div>
+                        <strong>یادگیری</strong>
+                        <small>چیز جدیدی به من یاد بده</small>
+                    </div>
+                </button>
+
+                <button onclick="setPrompt('یک کد حرفه‌ای برای من بنویس')">
+                    <span>💻</span>
+                    <div>
+                        <strong>برنامه‌نویسی</strong>
+                        <small>در ساخت پروژه کمکم کن</small>
+                    </div>
+                </button>
+
+                <button onclick="setPrompt('یک متن حرفه‌ای برای من بنویس')">
+                    <span>✍️</span>
+                    <div>
+                        <strong>نوشتن</strong>
+                        <small>برای من یک متن بساز</small>
+                    </div>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- پیام‌ها -->
+        <section class="messages" id="messages"></section>
+
+        <!-- کادر ارسال -->
+        <div class="input-area">
+
+            <div class="input-box">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="پیامت را برای KAKA AI بنویس..."
+                    rows="1"
+                    onkeydown="handleKey(event)"
+                ></textarea>
+
+                <button class="send-btn" onclick="sendMessage()">
+                    ➤
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                KAKA AI ممکن است اشتباه کند. اطلاعات مهم را بررسی کنید.
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
